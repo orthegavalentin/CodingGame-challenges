@@ -17,4 +17,11 @@ for example if the number is 4
 the solution of the problem is not quiet complete given that i dont 
 remember well how the question was asked
 
+******************************************************************************
+
+
+Question2) Compute the percetange of an interval given a string
+
+
+ [-----#---#----]    should return 36% (5/14)(5 being the number of chars inside the hashtag and the hashtag included)
 

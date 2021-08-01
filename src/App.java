@@ -1,7 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
-        computerSums(4);
+        // computerSums(4);
+        ComputePercentageOfInterval("-#-------#-");
     }
 
     /**
@@ -9,6 +10,7 @@ public class App {
      * Question number 1
      * 
      * We use a while loop inside two nested for loops
+     * 
      * 
      * 
      * 
@@ -37,6 +39,43 @@ public class App {
             }
 
         }
+
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * 
+     * 
+     */
+
+    public static int ComputePercentageOfInterval(String interval) {
+
+        char[] chars = interval.toCharArray();
+        boolean isValid = false;
+        int counter = 0;
+        for (char c : chars) {
+
+            if (c == '#' && !isValid) {
+                isValid = true;
+                counter++;
+                continue;
+
+            }
+            if (c != '#' && isValid) {
+                counter++;
+
+            }
+            if (c == '#' && isValid) {
+                counter++;
+                break;
+            }
+
+        }
+        System.out.println(Math.round(((counter / (float) interval.length()) * 100)));
+
+        return Math.round(((counter / (float) interval.length()) * 100));
 
     }
 }
